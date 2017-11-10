@@ -52,6 +52,7 @@ export default function createMetadataManager(): (manager: Manager) => MetadataM
             }
           }), dbSchema)
         })
+        .catch(err => console.error(err)) //eslint-disable-line
       },
       loadRelationsMetadata() {
         return manager.getPool().query(
